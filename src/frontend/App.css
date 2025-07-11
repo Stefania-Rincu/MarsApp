@@ -5,32 +5,57 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title {
+  text-align: center;
+  font-size: 42px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.description {
+  font-size: 20px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.app {
+  align-items: center;
+}
+
+.select-fields {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.select-dropdown > div {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.select-dropdown:hover > div {
+  border-color: #646cff;
+  box-shadow: 0 0 8px #646cffaa;
+}
+
+.photos-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.photo-item {
+  padding: 2rem;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 8px;
+}
+
+.submit-button-container {
+  margin-top: 20px;
 }
 
 .card {
@@ -40,3 +65,24 @@
 .read-the-docs {
   color: #888;
 }
+
+.nasa-card {
+  padding: 1.5em;
+}
+
+.nasa-title {
+  text-align: center;
+  font-size: 42px;
+}
+
+.nasa-info {
+  font-size: 18px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.nasa-logo {
+  height: 10em;
+  padding: 1.5em;
+}
+

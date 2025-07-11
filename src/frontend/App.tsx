@@ -1,35 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css"
+import SelectRoverComponent from "./components/SelectRoverComponent.tsx";
+import SelectCameraComponent from "./components/SelectCameraComponent.tsx";
+import { useState } from "react";
+import SubmitButton from "./components/SubmitButton.tsx";
+import GetPhotosComponent from "./components/GetPhotosComponent.tsx";
+import {NasaInfo} from "./components/NasaInfo.tsx";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [selectedRover, setSelectedRover] = useState(null);
+    const [selectedCamera, setSelectedCamera] = useState(null);
+    const [displayPhotos, setDisplayPhotos] = useState(false);
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const getPhotos = () => {
+        if (selectedRover && selectedCamera) {
+            setDisplayPhotos(true);
+        }
+    };
+
+    return (
+        <div className="app">
+            <NasaInfo />
+            <p className="description"> Select a rover and a camera type to display images taken by them.</p>
+            <div className="select-fields">
+                <SelectRoverComponent onSelectRover={setSelectedRover} />
+                <SelectCameraComponent selectedRover={selectedRover} onSelectCamera={setSelectedCamera} />
+            </div>
+            <SubmitButton disabled={!selectedRover || !selectedCamera} onClick={getPhotos} />
+            {displayPhotos && (
+                <GetPhotosComponent selectedRover={selectedRover} selectedCamera={selectedCamera} />)}
+        </div>
+    )
 }
 
 export default App

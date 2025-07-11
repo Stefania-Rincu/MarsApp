@@ -1,9 +1,9 @@
 import axios from "axios";
-import type {Camera} from "./cameras";
-import type {Rover} from "./rovers";
-import {NASA_API_BASE_URL} from "./server";
+import type { Camera } from "./cameras";
+import type { Rover } from "./rovers";
+import { NASA_API_BASE_URL } from "./server";
 
-interface TrimmedPhoto {
+export interface TrimmedPhoto {
     id: number;
     cameraName: string;
     roverName: string;
