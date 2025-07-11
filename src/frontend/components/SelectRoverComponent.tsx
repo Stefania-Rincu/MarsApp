@@ -31,8 +31,8 @@ const SelectRoverComponent = ({ onSelectRover }) => {
 
     return (
         <div className="select-container">
-            <h2 className="select-title">Select a rover</h2>
-            <Select className="select-dropdown" options={rovers} value={selectedRover} onChange={selectRover} placeholder={"Choose a rover"}/>
+            <h2 className="select-title">Rover</h2>
+            <Select className="select-dropdown" options={rovers} value={selectedRover} onChange={selectRover} placeholder={"Select a rover"}/>
         </div>
     );
 }

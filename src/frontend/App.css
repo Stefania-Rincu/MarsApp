@@ -5,6 +5,16 @@
   text-align: center;
 }
 
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.select-container {
+  margin: 3rem;
+}
+
 .select-dropdown > div {
   width: 300px;
   border: 1px solid #ccc;
