@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { fetchRovers } from "./rovers"
 import { fetchPhotos } from "./photos";
 import * as dotenv from "dotenv";
@@ -9,6 +10,8 @@ const port = 8000;
 export const NASA_API_BASE_URL: string = `https://api.nasa.gov/mars-photos/api/v1/rovers`;
 
 app.use(express.json());
+app.use(cors());
+
 const router = express.Router();
 router.get('/test', (req: any, res: any) => res.send('Hello world !'));
 
