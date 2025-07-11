@@ -5,7 +5,21 @@
   text-align: center;
 }
 
+.title {
+  text-align: center;
+  font-size: 42px;
+}
+
+.description {
+  font-size: 18px;
+  text-align: center;
+}
+
 .app {
+  align-items: center;
+}
+
+.select-fields {
   display: flex;
   align-items: center;
   justify-content: center
@@ -27,6 +41,25 @@
 .select-dropdown:hover > div {
   border-color: #646cff;
   box-shadow: 0 0 8px #646cffaa;
+}
+
+.photos-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.photo-item {
+  padding: 2rem;
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 8px;
+}
+
+
+.submit-button-container {
+  margin-top: 10px;
 }
 
 .card {
