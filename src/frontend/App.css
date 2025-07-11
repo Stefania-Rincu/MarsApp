@@ -11,7 +11,7 @@
 }
 
 .description {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -22,11 +22,8 @@
 .select-fields {
   display: flex;
   align-items: center;
-  justify-content: center
-}
-
-.select-container {
-  margin: 3rem;
+  justify-content: center;
+  gap: 3rem;
 }
 
 .select-dropdown > div {
@@ -57,9 +54,8 @@
   border-radius: 8px;
 }
 
-
 .submit-button-container {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .card {
@@ -70,4 +66,23 @@
   color: #888;
 }
 
+.nasa-card {
+  padding: 1.5em;
+}
+
+.nasa-title {
+  text-align: center;
+  font-size: 42px;
+}
+
+.nasa-info {
+  font-size: 18px;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+.nasa-logo {
+  height: 10em;
+  padding: 1.5em;
+}
 

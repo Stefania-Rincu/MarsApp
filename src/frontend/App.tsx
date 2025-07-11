@@ -4,6 +4,7 @@ import SelectCameraComponent from "./components/SelectCameraComponent.tsx";
 import { useState } from "react";
 import SubmitButton from "./components/SubmitButton.tsx";
 import GetPhotosComponent from "./components/GetPhotosComponent.tsx";
+import {NasaInfo} from "./components/NasaInfo.tsx";
 
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
 
     return (
         <div className="app">
-            <h1 className='title'> National Aeronautics and Space Administration (NASA) Info </h1>
-            <p className="description">Select a rover and a camera type to retrieve photos taken by them.</p>
+            <NasaInfo />
+            <p className="description"> Select a rover and a camera type to display images taken by them.</p>
             <div className="select-fields">
                 <SelectRoverComponent onSelectRover={setSelectedRover} />
                 <SelectCameraComponent selectedRover={selectedRover} onSelectCamera={setSelectedCamera} />
